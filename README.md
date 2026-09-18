@@ -2,7 +2,7 @@
 
 This repository is a bounded demonstration surface for an agent workflow constrained by an external admission boundary.
 
-Official product surface:
+Official public demonstration surface:
 
 https://ai-admissibility.com/
 
@@ -19,7 +19,9 @@ Agent prepares intent -> external boundary evaluates -> ALLOW permits the next c
 - not the canonical installed runtime;
 - not the public Marketplace Action;
 - not payment infrastructure;
+- not credential issuance;
 - not a customer deployment;
+- not a commercial hosted service;
 - not a universal safety or compliance guarantee.
 
 ## Historical note
@@ -30,8 +32,15 @@ For current product status and terminology, use:
 
 https://ai-admissibility.com/
 
+## Collaboration
+
+The website and GitHub repositories are demonstration surfaces only.
+
+For collaboration or deployment discussions:
+
+**governance@ai-admissibility.com**
+
 ## Related surfaces
 
 - Boundary architecture / proof: https://github.com/pinfloyd/ai-admissibility-boundary
 - Current Marketplace evaluation Action: https://github.com/pinfloyd/ai-admissibility-action
-- Request access: https://ai-admissibility.com/request
