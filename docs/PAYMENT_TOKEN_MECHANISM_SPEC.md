@@ -1,12 +1,22 @@
-# Payment Token Mechanism Spec
+# Historical design note — Payment Token Mechanism Spec
 
-Candidate providers: Stripe or Lemon Squeezy.
+**Status: historical reference only. Not an active payment, access, or credential mechanism.**
 
-Flow:
-1. Payment succeeds.
-2. System issues an access token.
-3. Token is stored in .env for local runtime.
-4. Runtime checks token before paid mode.
-5. External action still requires boundary ALLOW.
+This file records an earlier design exploration involving Stripe or Lemon Squeezy and access-token issuance.
 
-Free mode: no token means WOULD_SEND only; no email is sent.
+That mechanism is not part of the current public product surface.
+
+The current website and GitHub repositories do not:
+
+- process checkout;
+- issue access tokens or credentials;
+- unlock paid execution modes;
+- run customer production workloads.
+
+Current public status:
+
+https://ai-admissibility.com/
+
+The only architectural rule carried forward from this design is that commercial or identity context, if used in a future deployment, must never replace the external admission decision itself.
+
+**No Admission = No Execution.**
