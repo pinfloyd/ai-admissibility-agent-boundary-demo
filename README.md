@@ -1,49 +1,37 @@
-# AI Admissibility Agent + External Boundary
+# AI Admissibility Agent + External Boundary Demo
 
-AI Admissibility is packaged as Agent + External Boundary/SAB.
+This repository is a bounded demonstration surface for an agent workflow constrained by an external admission boundary.
 
-The agent prepares sales intelligence, local briefs, and draft-only text. External actions remain gated by admission.
+Official product surface:
 
-## Core rule
+https://ai-admissibility.com/
 
-No Admission = No Execution.
+**No Admission = No Execution.**
 
-## Demo promise
+## What this demo shows
 
-The demo shows useful preparation, not uncontrolled autonomy. The agent reads public signals, creates local briefs, and prepares draft-only text.
+The agent may prepare local intent, evidence, and draft-only material. Protected external execution requires an admission decision for the exact request.
 
-## What this is not
+Agent prepares intent -> external boundary evaluates -> ALLOW permits the next controlled step -> DENY or failure blocks execution.
 
-- Not a scanner.
-- Not monitoring.
-- Not rollback.
-- Not a generic guardrail.
-- Not a certification or universal safety claim.
+## What this repository is not
 
-## Local run concept
+- not the canonical installed runtime;
+- not the public Marketplace Action;
+- not payment infrastructure;
+- not a customer deployment;
+- not a universal safety or compliance guarantee.
 
-docker run -v ./state:/app/state ai-admissibility-agent scan
+## Historical note
 
-## Free vs paid candidate
+Some demonstration material in this repository refers to earlier hosted-authority identifiers such as `HOSTED_L5_AUTHORITY_V2`. Those identifiers describe historical proof artifacts and must not be interpreted as the current canonical runtime identity.
 
-Free: dry-run, read-only, local draft only. Paid candidate: external actions require token plus boundary ALLOW. Pricing is candidate-only, not final public pricing.
+For current product status and terminology, use:
 
----
+https://ai-admissibility.com/
 
-## What this demo proves
+## Related surfaces
 
-This public demo shows an agent workflow bound to an external admission boundary. The agent may prepare local intent, local evidence, and public-safe candidate material, but external execution is not allowed unless the hosted authority returns a signed ALLOW for the exact request.
-
-Core rule: No Admission = No Execution.
-
-## What this demo does not claim
-
-This repository is not the full commercial product, not private enforcement logic, not payment infrastructure, not a customer deployment, and not a general safety guarantee.
-
-## Boundary decision model
-
-Agent prepares intent -> external boundary evaluates the exact request -> ALLOW permits the next controlled step -> DENY or FAIL blocks execution.
-
-## Hash contract
-
-For HOSTED_L5_AUTHORITY_V2 with ai-secrets-v1, added_lines_sha256 is SHA256 over added_lines joined by newline with no trailing final newline.
+- Boundary architecture / proof: https://github.com/pinfloyd/ai-admissibility-boundary
+- Current Marketplace evaluation Action: https://github.com/pinfloyd/ai-admissibility-action
+- Request access: https://ai-admissibility.com/request
